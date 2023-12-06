@@ -4,7 +4,6 @@ import re
 # Solution for Advent of Code 2023 Day 1 
 
 # For a given string, return a digit made up of first and last digits
-
 def soln( input : str ) -> int:
     digits = re.findall(r'\d', input)
     # if no digits, return 0
@@ -20,16 +19,15 @@ def soln( input : str ) -> int:
 
 # Read the input and return the contents as a list of strings
 def getInput():
-    with open('input.txt', 'r') as f:
+    with open('../input.txt', 'r') as f:
         return f.read().splitlines()
     pass
 
 # Format output (Print all the answers, and metadata, plus sum total of the answers)
 def formatOutput( input : list[str], answers : list[int] ):
     for key, answer in enumerate(answers):
-        print(f"{input[key]}\t:\t{answer}")
+        print(f"{input[key]} : {answer}")
     pass
-    print(f"Answers: {answers}")
     print(f"\nTotal Input Length: {len(answers)}")
     # Final submission
     print(f"Total Sum: {sum(answers)}")
